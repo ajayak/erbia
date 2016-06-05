@@ -1,0 +1,11 @@
+{
+  "name": "erbia",
+  "dependencies": {},
+  "globalDependencies": {
+    "angular": "registry:dt/angular#1.5.0+20160602160139",
+    "gulp": "registry:dt/gulp#3.8.0+20160316155526",
+    "jquery": "registry:dt/jquery#1.10.0+20160417213236",
+    "lodash": "registry:dt/lodash#3.10.0+20160330154726",
+    "node": "registry:dt/node#6.0.0+20160602155235"
+  }
+}
