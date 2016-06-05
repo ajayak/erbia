@@ -23,6 +23,7 @@ var paths = {
         'app/helpers/**',
         'app/app.html',
         'app/src/**',
+        'app/assets/**',
         'app/*.+(jpg|png|svg)',
         'app/bower_components/material-design-icons/iconfont/**',
         'app/bower_components/Materialize/dist/**',
@@ -31,13 +32,15 @@ var paths = {
         'app/bower_components/jquery/dist/jquery.min.js',
         'app/bower_components/angular/angular.js',
         'app/bower_components/router/dist/router.es5.js',
-        'app/bower_components/angular-animate/angular-animate.js',        
-        'app/bower_components/angular-ui-router/release/angular-ui-router.js'
+        'app/bower_components/angular-animate/angular-animate.min.js',        
+        'app/bower_components/angular-ui-router/release/angular-ui-router.js',
+        'app/bower_components/offline/offline.min.js'
     ],
     copyEssentialFromAppDir: [
         'app/helpers/**',
         'app/app.html',
-        'app/src/**'
+        'app/src/**',
+        'app/assets/**'
     ],
 };
 

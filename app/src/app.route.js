@@ -9,6 +9,6 @@
             .state('home', {
                 url: "/home",
                 template: "<home></home>"
-            })
+            });
     }
 }

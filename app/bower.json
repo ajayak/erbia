@@ -25,6 +25,7 @@
     "hammerjs": "^2.0.8",
     "angular-ui-router": "^0.3.1",
     "toastr": "^2.1.2",
-    "angular-animate": "^1.5.6"
+    "angular-animate": "^1.5.6",
+    "offline": "https://github.com/HubSpot/offline.git#^0.7.15"
   }
 }

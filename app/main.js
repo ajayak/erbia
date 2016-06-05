@@ -23,3 +23,4 @@
 //     document.getElementById('platform-info').innerHTML = os.platform();
 //     document.getElementById('env-name').innerHTML = env.name;
 // });
+Offline.options = {checks: {xhr: {url: 'https://www.google.com'}}};

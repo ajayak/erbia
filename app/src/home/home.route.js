@@ -12,6 +12,6 @@
             .state('connect-offline', {
                 url: "/home-offline",
                 template: "<connect-offline></connect-offline>"
-            })
+            });
     }
 }
