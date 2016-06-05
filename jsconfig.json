@@ -8,9 +8,11 @@
 	},
 	"exclude": [
 		"node_modules",
-		"bower_components",
+		"app/node_modules",
+		"app/bower_components",
 		"jspm_packages",
 		"tmp",
-		"temp"
+		"temp",
+		"build"
 	]
 }

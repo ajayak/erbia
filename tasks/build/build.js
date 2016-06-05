@@ -30,7 +30,9 @@ var paths = {
         'app/bower_components/lodash/dist/lodash.min.js',
         'app/bower_components/jquery/dist/jquery.min.js',
         'app/bower_components/angular/angular.js',
-        'app/bower_components/angular-new-router/dist/router.es5.js',
+        'app/bower_components/router/dist/router.es5.js',
+        'app/bower_components/angular-animate/angular-animate.js',        
+        'app/bower_components/angular-ui-router/release/angular-ui-router.js'
     ],
     copyEssentialFromAppDir: [
         'app/helpers/**',
@@ -62,7 +64,7 @@ gulp.task('copy-watch', copyTask(paths.copyEssentialFromAppDir));
 var bundleApplication = function () {
     return Q.all([
         bundle(srcDir.path('background.js'), destDir.path('background.js')),
-        bundle(srcDir.path('app.js'), destDir.path('app.js')),
+        bundle(srcDir.path('main.js'), destDir.path('main.js')),
     ]);
 };
 

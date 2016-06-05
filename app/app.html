@@ -17,25 +17,29 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/Materialize/dist/js/materialize.min.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-new-router/dist/router.es5.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
-    <script src="app.js"></script>
+    <script src="main.js"></script>
 </head>
 
 <body>
-    <i class="material-icons">face</i>
-    <div class="container">
-        <h1 id="greet"></h1>
-        <p class="subtitle">
-            Welcome to <a href="http://electron.atom.io" class="js-external-link">Electron</a> app running on this magnificent
-            <strong id="platform-info"></strong> machine.
-        </p>
-        <p class="subtitle">
-            You are in <strong id="env-name"></strong> environment.
-        </p>
-        <test></test>
-    </div>
+    
+    <ui-view></ui-view>
+    
+    <script src="src/app.module.js"></script>
+    <script src="src/app.route.js"></script>
+    
+    <script src="src/core/core.module.js"></core/script>
+    <script src="src/core/config.js"></core/script>
+    <script src="src/core/constants.js"></script>
+    
+    <script src="src/home/home.module.js"></script>
+    <script src="src/home/home.route.js"></script>
+    <script src="src/home/home.component.js"></script>
+    <script src="src/home/connect-online/connect-online.component.js"></script>
+    <script src="src/home/connect-offline/connect-offline.component.js"></script>
+
 </body>
-<script src="src/main.js"></script>
 
 </html>
