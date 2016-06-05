@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="app">
 
 <head>
     <meta charset="utf-8">
@@ -11,7 +11,7 @@
 
     <script src="helpers/context_menu.js"></script>
     <script src="helpers/external_links.js"></script>
-    
+
     <script src="bower_components/lodash/dist/lodash.min.js"></script>
     <script src="bower_components/hammerjs/hammer.min.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -23,7 +23,7 @@
 </head>
 
 <body>
-<i class="material-icons">face</i>
+    <i class="material-icons">face</i>
     <div class="container">
         <h1 id="greet"></h1>
         <p class="subtitle">
@@ -33,7 +33,9 @@
         <p class="subtitle">
             You are in <strong id="env-name"></strong> environment.
         </p>
+        <test></test>
     </div>
 </body>
+<script src="src/main.js"></script>
 
 </html>

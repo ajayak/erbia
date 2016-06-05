@@ -18,7 +18,7 @@ var srcDir = projectDir.cwd('./app');
 var destDir = projectDir.cwd('./build');
 
 var paths = {
-    copyFromAppDir: [
+    copyAllFromAppDir: [
         'app/node_modules/**',
         'app/helpers/**',
         'app/app.html',
@@ -32,6 +32,11 @@ var paths = {
         'app/bower_components/angular/angular.js',
         'app/bower_components/angular-new-router/dist/router.es5.js',
     ],
+    copyEssentialFromAppDir: [
+        'app/helpers/**',
+        'app/app.html',
+        'app/src/**'
+    ],
 };
 
 // -------------------------------------
@@ -43,13 +48,15 @@ gulp.task('clean', function () {
 });
 
 
-var copyTask = function () {
-    return gulp
-        .src(paths.copyFromAppDir, { base: './app' })
-        .pipe(gulp.dest(destDir.path()));
+var copyTask = function (path) {
+    return function () {
+        return gulp
+            .src(path, { base: './app' })
+            .pipe(gulp.dest(destDir.path()));
+    }
 };
-gulp.task('copy', ['clean'], copyTask);
-gulp.task('copy-watch', copyTask);
+gulp.task('copy', ['clean'], copyTask(paths.copyAllFromAppDir));
+gulp.task('copy-watch', copyTask(paths.copyEssentialFromAppDir));
 
 
 var bundleApplication = function () {
@@ -103,10 +110,10 @@ function reloadRendererProcess(done) {
 }
 
 gulp.task('watch', function () {
-    watch(['app/**/*.js', '!app/node_modules', '!app/bower_components'], batch(function (events, done) {
+    watch(['app/*.js', '!app/node_modules', '!app/bower_components'], batch(function (events, done) {
         gulp.start('bundle-watch', reloadRendererProcess(done));
     }));
-    watch(paths.copyFromAppDir, batch(function (events, done) {
+    watch(paths.copyEssentialFromAppDir, batch(function (events, done) {
         gulp.start('copy-watch', reloadRendererProcess(done));
     }));
     watch(['app/stylesheets/*.less', '!app/node_modules', '!app/bower_components'], batch(function (events, done) {
