@@ -1,3 +1,23 @@
-Connect Online
+<form class="row">
+    <div class="col s12">
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input type="text" class="validate" id="username" ng-model="vm.username">
+                <label for="username">Username</label>
+            </div>
+
+            <div class="input-field col s6">
+                <i class="material-icons prefix">lock</i>
+                <input type="password" class="validate" id="password" ng-model="vm.password">
+                <label for="password">Password</label>
+            </div>
+
+            <button class="btn waves-effect waves-light" type="button" name="submit" ng-click="vm.loginOnline()">
+                Submit <i class="material-icons right">send</i>
+            </button>
+        </div>
+    </div>
+</form>
 
 <a ui-sref="home">Go Back</a>

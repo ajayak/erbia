@@ -10,7 +10,7 @@
             if (internetRequiredStates.indexOf(toState.name) === -1) return;
             Offline.check();
             if (Offline.state !== 'down') return;
-            e.preventDefault();
+            // e.preventDefault();
             Materialize.toast('You seems to be offline. Please verify your internet connection to proceed further.', 3000, 'rounded');
         });
     }
